@@ -10,9 +10,9 @@ class Card{
         CardNames _name;
 
     public:
-        Card();
-        Card(const Suits& suit, const CardNames& name);
+        Card() = delete;
         Card(const Card& card);
+        Card(const Suits& suit, const CardNames& name);
         
         Suits get_suit() const;
         CardNames get_name() const;

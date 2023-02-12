@@ -1,12 +1,15 @@
 #include <iostream>
 #include "cards.h"
 
-Card::Card() = delete;
-Card::Card(const Card& card) = delete;
 
 Card::Card(const Suits& suit, const CardNames& name){
     _suit = suit;
     _name = name;
+}
+
+Card::Card(const Card& card){
+    _suit = card.get_suit();
+    _name = card.get_name();
 }
 
 CardNames Card::get_name() const{
@@ -18,7 +21,7 @@ Suits Card::get_suit() const{
 }
 
 void Card::print_card() const{
-    if(_name == CardNames::ACE){std::cout << "ace of ";}
+    if(_name == CardNames::ACE){std::cout << "Ace of ";}
     else if(_name == CardNames::TWO){std::cout << "2 of ";}
     else if(_name == CardNames::THREE){std::cout << "3 of ";}
     else if(_name == CardNames::FOUR){std::cout << "4 of ";}
@@ -32,8 +35,9 @@ void Card::print_card() const{
     else if(_name == CardNames::QUEEN){std::cout << "Queen of ";}
     else if(_name == CardNames::KING){std::cout << "King of ";}
     
-    if(_suit == Suits::CLUBS){std::cout << "clubs" << "\n";}
-    else if(_suit == Suits::DIAMONDS){std::cout << "diamonds" << "\n";}
-    else if(_suit == Suits::HEARTS){std::cout << "hearts" << "\n";}
-    else if(_suit == Suits::SPADES){std::cout << "spades" << "\n";}
+    if(_suit == Suits::CLUBS){std::cout << "Clubs" << "\n";}
+    else if(_suit == Suits::DIAMONDS){std::cout << "Diamonds" << "\n";}
+    else if(_suit == Suits::HEARTS){std::cout << "Hearts" << "\n";}
+    else if(_suit == Suits::SPADES){std::cout << "Spades" << "\n";}
 }
+

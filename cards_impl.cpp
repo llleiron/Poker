@@ -12,6 +12,14 @@ Card::Card(const Card& card){
     _name = card.get_name();
 }
 
+void Card::set_name(const CardNames& name){
+    _name = name;
+}
+
+void Card::set_suit(const Suits& suit){
+    _suit = suit;
+}
+
 CardNames Card::get_name() const{
     return _name;
 }
@@ -40,4 +48,3 @@ void Card::print_card() const{
     else if(_suit == Suits::HEARTS){std::cout << "Hearts" << "\n";}
     else if(_suit == Suits::SPADES){std::cout << "Spades" << "\n";}
 }
-

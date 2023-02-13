@@ -10,6 +10,7 @@ class Deck{
     
     public:
         Deck();
+        void setup();
         Deck(const Deck& deck);
         void delete_card(Card& card);
         int find_card(const Card& card) const;

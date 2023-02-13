@@ -17,6 +17,8 @@ class Card{
         Suits get_suit() const;
         CardNames get_name() const;
         void print_card() const;
+        void set_name(const CardNames& name);
+        void set_suit(const Suits& suit);
 };
 
 #endif

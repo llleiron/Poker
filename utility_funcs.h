@@ -1,1 +1,0 @@
-int generate_random_number(int lhs, int rhs);
